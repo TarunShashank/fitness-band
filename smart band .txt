@@ -1,0 +1,118 @@
+Aurdrino Nano (AT Mega 328-32 indicates 32 bit)
+---------------------------------------------------------------
+->temp,pressure,ldr-analog sensor. 
+->i\r,sound-digital sensor.
+->use 'A' infront of port number for an analog device.
+->no need to use 'A' infront of port number for digital device. ----------------------------------------------------------------
+
+temp sensor(LM 35)
+--------------------------------------------------------------------
+ 
+     ------------
+      |    |   |
+      vcc o/p grnd
+
+connections:-
+5V(AT Mega)  -Vcc(LM 35)
+A0(AT Mega)  -o/p(LM 35)
+0grnd(AT Mega)-grnd(LM 35)      
+
+->9600 is default baud rate(transmittion rate) for aurdrino and pc.
+---------------------------------------------------------------------
+
+
+Heart Beat sensor
+-----------------------------------------
+
+->It has IR sensor.
+
+->It contins 3 pins D,+,-.
+->+,- is for pwr sply
+->D is for data
+
+->A1(audrino)   -D(hbt sensor)
+->+5v(audrino)  -+(hbt sensor)
+->grnd(audrino) -'-'(hbt sensor)
+------------------------------------------
+
+B/T module with base (HC-05)
+--------------------------------------------------------------------------------------
+->5 pins 
+->grnd(module)-grnd(audrino)
+->+5v(module)-A5(audrino)
+->RX(module)- D10(aurdino)           
+->TX(module)- D11(aurdino)
+->KEY(module)-
+
+[RX(module)-Tx(audrino)&TX(module)-RX(aurdino) for finding macadress of bt device]
+
+----------------------------------------------------------------------------------------
+
+gyro-accleromtr sensor (MPU-6050)
+
+-----------------------------------------------------------------------------------------
+
+
+->it is a analog sensor.
+->SDA(MPU)       -A04 (arduino)
+->SCl(MPU)       -A05 (arduino)
+->interupt(MPU)  -D02(arduino)
+->vcc(MPU)       -5v/vin(arduino)
+  grnd(MPU)      -grnd(arduino
+-------------------------------------------------------------------------------------------
+
+battery
+
+red(battery)-vin(arduino)
+black(battery)-grnd(arduino)
+
+->to use any pin as VCC&Grnd first define them in code as Output
+then write for an example.
+
+->digitalWrite(9,HIGH);//will act as VCC
+
+->digitalWrite(8,LOW);//will act as a groung
+
+->change SDA&SCL pins from digital pins to analog pins.
+
+->SDA will be connected to A4
+
+->SCL will be connected to A5.
+
+
+
+
+yadavajeetmail@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
